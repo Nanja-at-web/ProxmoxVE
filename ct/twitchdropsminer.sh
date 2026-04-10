@@ -55,7 +55,8 @@ start
 build_container
 description
 
-IP=$(pct exec "$CTID" -- hostname -I 2>/dev/null | awk '{print $1}')msg_ok "Completed successfully!\n"
+IP=$(pct exec "$CTID" -- hostname -I 2>/dev/null | awk '{print $1}')
+msg_ok "Completed successfully!\n"
 echo -e "${CREATING}${GN}${APP} setup has been successfully initialized!${CL}"
 echo -e "${INFO}${YW} Access the Web UI at:${CL}"
 echo -e "${TAB}${GATEWAY}${BGN}http://${IP}:8080${CL}"
